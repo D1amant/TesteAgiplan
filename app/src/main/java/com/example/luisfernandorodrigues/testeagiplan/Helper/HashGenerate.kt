@@ -11,8 +11,7 @@ class HashGenerate{
 
      fun getHash (ts : String , privatekey : String , apikey : String ) : String? {
          val x = ts+privatekey+apikey
-         var d: java.security.MessageDigest? = null
-         d = java.security.MessageDigest.getInstance("MD5")
+         var d: java.security.MessageDigest? = java.security.MessageDigest.getInstance("MD5")
          d!!.reset()
          d.update(x.toByteArray())
 

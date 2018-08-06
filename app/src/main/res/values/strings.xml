@@ -5,5 +5,8 @@
     <string name="privatekey">74138d2135bab23e402b9bd6292337aec6ad93e2</string>
     <string name="label_name">Nome:</string>
     <string name="label_description">Descrição</string>
-    <string name="message_comics_not_data">Dados de quadrinhos não encontrados</string>
+    <string name="message_comics_not_data">Dados dos quadrinhos não encontrados</string>
+    <string name="message_characters">Que pena personagens acabaram</string>
+    <string name="Comics">Quadrinhos</string>
+    <string name="message_character_error">Que pena personagens acabaram</string>
 </resources>

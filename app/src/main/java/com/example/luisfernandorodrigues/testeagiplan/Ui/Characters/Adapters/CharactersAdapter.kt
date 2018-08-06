@@ -25,7 +25,7 @@ class CharactersAdapter(val context : Context, val characterList: List<Character
     }
 
     override fun getItemCount(): Int {
-        return if(characterList.isNotEmpty()) characterList!!.size else 0 //To change body of created functions use File | Settings | File Templates.
+        return if(characterList.isNotEmpty()) characterList.size else 0 //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
@@ -33,7 +33,7 @@ class CharactersAdapter(val context : Context, val characterList: List<Character
 
         holder.tvName.setText(characterResponse!!.name)
         Picasso.get()
-                .load(characterResponse!!.thumbnail!!.path+"."+characterResponse!!.thumbnail!!.extension)
+                .load(characterResponse.thumbnail!!.path+"."+ characterResponse.thumbnail!!.extension)
                 .into(holder.image)
 
         if(position == characterList.size -1){

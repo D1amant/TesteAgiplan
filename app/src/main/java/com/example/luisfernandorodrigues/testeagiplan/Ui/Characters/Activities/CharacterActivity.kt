@@ -31,8 +31,7 @@ class CharacterActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true)
 
-        //actionBar.setDisplayHomeAsUpEnabled(true)
-        characterId = intent.getIntExtra("characterId" , 0)
+        characterId = intent.getIntExtra(CHARACTERID , 0)
         if(characterId != 0){
             model!!.getChatacters(applicationContext, characterId!!)
         }
@@ -50,11 +49,12 @@ class CharacterActivity : AppCompatActivity() {
 
     fun observer(){
         model!!.characterListObserver.observe(this , Observer { character -> updateView(character!!) })
+        model!!.errorObserver.observe(this , Observer { message -> error(message!!) })
     }
 
     fun updateView(character : CharacterResponse){
         Picasso.get()
-                .load(character.thumbnail!!.path+"."+character!!.thumbnail!!.extension)
+                .load(character.thumbnail!!.path+"."+ character.thumbnail.extension)
                 .into(image)
         tvNameValue.setText(character.name)
         ites!!.addAll(character.comics!!.items!!)
@@ -62,10 +62,17 @@ class CharacterActivity : AppCompatActivity() {
         cardHeader.visibility = View.VISIBLE
         progressBar.visibility = View.GONE
 
-        if(character.comics!!.items!!.size >= 0){
+        if(character.comics.items!!.size > 0){
             tvMessage.visibility = View.GONE
+        }else{
+            tvMessage.visibility = View.VISIBLE
         }
 
+    }
+
+    fun error(message : String){
+        tvMessage.visibility = View.VISIBLE
+        tvMessage.text = message
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -75,5 +82,9 @@ class CharacterActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    companion object {
+        var CHARACTERID = "characterId"
     }
 }

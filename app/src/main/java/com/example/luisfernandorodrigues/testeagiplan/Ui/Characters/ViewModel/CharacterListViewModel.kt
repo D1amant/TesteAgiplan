@@ -21,7 +21,7 @@ class CharacterListViewModel: ViewModel(), ResponseInterface<List<CharacterRespo
         if (!ts.isNullOrBlank()) {
             var hash : String? =  hashGenerate.getHash(ts!! , context.getString(R.string.privatekey), context.getString(R.string.apikey))
             var repository  = CharacterRepository.getInstaceList(context, this)
-            repository!!.getCharacters(ts ,  context.getString(R.string.apikey), hash!!)
+            repository.getCharacters(ts ,  context.getString(R.string.apikey), hash!!)
         }
     }
 

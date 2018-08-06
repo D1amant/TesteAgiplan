@@ -21,7 +21,7 @@ class ComicsAdapter(val context : Context, val comicsList: List<Item>) : Recycle
     }
 
     override fun getItemCount(): Int {
-        return if(comicsList.isNotEmpty()) comicsList!!.size else 0 //To change body of created functions use File | Settings | File Templates.
+        return if(comicsList.isNotEmpty()) comicsList.size else 0 //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {

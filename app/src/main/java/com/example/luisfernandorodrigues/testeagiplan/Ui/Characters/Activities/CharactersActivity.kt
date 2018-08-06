@@ -52,7 +52,7 @@ class CharactersActivity : AppCompatActivity(),UpdateListInterface {
 
     override fun onUpdate(exce: Boolean) {
         model!!.getChatacters(applicationContext)
-        progressBar.visibility = View.VISIBLE
+        //progressBar.visibility = View.VISIBLE
     }
 
 }
