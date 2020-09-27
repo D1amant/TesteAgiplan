@@ -1,7 +1,6 @@
 # Agibank test (Marvel api)
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
 ![GitHub issues](https://img.shields.io/github/issues/luisfrsantos/TesteAgibank)
-![GitHub contributors](https://img.shields.io/github/stars/luisfrsantos/TesteAgibank/README-template.md)
 ![GitHub forks](https://img.shields.io/github/forks/luisfrsantos/TesteAgibank)
 ![GitHub starts](https://img.shields.io/github/stars/luisfrsantos/TesteAgibank)
 
