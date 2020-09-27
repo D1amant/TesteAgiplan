@@ -30,7 +30,7 @@ class CharactersAdapter(
                     .inflate(R.layout.adapter_character, parent, false))
 
     override fun getItemCount(): Int {
-        return if (characterList.isNotEmpty()) characterList.size else 0 // To change body of created functions use File | Settings | File Templates.
+        return if (characterList.isNotEmpty()) characterList.size else 0
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
@@ -38,7 +38,7 @@ class CharactersAdapter(
 
         holder.tvName.text = characterResponse!!.name
         Picasso.get()
-                .load("${characterResponse.thumbnail!!.path}.${characterResponse.thumbnail.extension}"
+                .load("${characterResponse.thumbnail?.path}.${characterResponse.thumbnail?.extension}"
                         .replace(":", "s:")
                 )
                 .error(ContextCompat.getDrawable(context, R.drawable.ic_launcher_foreground)!!)

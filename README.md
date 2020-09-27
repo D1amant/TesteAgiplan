@@ -1,14 +1,11 @@
 # Agibank test (Marvel api)
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
-![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/scottydocs/README-template.md)
-![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
+![GitHub issues](https://img.shields.io/github/issues/luisfrsantos/TesteAgibank)
+![GitHub contributors](https://img.shields.io/github/stars/luisfrsantos/TesteAgibank/README-template.md)
+![GitHub forks](https://img.shields.io/github/forks/luisfrsantos/TesteAgibank)
+![GitHub starts](https://img.shields.io/github/stars/luisfrsantos/TesteAgibank)
 
-Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
-
-Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
+This Project is a app that allows  view Marvel character and comics.
 
 ## Prerequisites
 
@@ -32,11 +29,7 @@ If you developed on Windows, you might need to install the appropriate USB drive
 
 ## Using Agibank test
 
-To use Agibank test, follow these steps:
-
-```
-<usage_example>
-```
+![](gifApp.gif)
 
 Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
@@ -68,4 +61,4 @@ If you want to contact me you can reach me at <your_email@address.com>.
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [GPL-3.0 License](https://github.com/luisfrsantos/TesteAgibank/blob/master/LICENSE).

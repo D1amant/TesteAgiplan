@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Personagens</string>
+    <string name="app_name">Marvel</string>
     <string name="base_url">https://gateway.marvel.com/v1/public/</string>
     <string name="apikey">40b99748c5946df64d95ffa4cb37fb07</string>
     <string name="privatekey">74138d2135bab23e402b9bd6292337aec6ad93e2</string>

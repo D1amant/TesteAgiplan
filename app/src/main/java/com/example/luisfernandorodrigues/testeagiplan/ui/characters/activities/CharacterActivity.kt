@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.luisfernandorodrigues.testeagiplan.R
@@ -17,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_character.*
 class CharacterActivity : AppCompatActivity() {
 
     lateinit var model: CharacterViewModel
-    var characterId: Int? = null
+    private var characterId: Int? = null
     var ites: ArrayList<Item>? = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +53,7 @@ class CharacterActivity : AppCompatActivity() {
         Picasso.get()
                 .load("${character.thumbnail?.path}.${character.thumbnail?.extension}"
                         .replace(":", "s:"))
+                .error(ContextCompat.getDrawable(applicationContext, R.drawable.ic_launcher_foreground)!!)
                 .into(image)
         tvNameValue.text = character.name
         ites?.addAll(character.comics!!.items!!)
